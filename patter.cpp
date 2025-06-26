@@ -215,8 +215,11 @@ void print14(int n = 5){
         }
         // character
         char c = 'A';
-        for(char j = 0; j<2*i+1; j++){
+        int breakpoint = (2*i+1)/2;
+        for(char j = 1; j<=2*i+1; j++){
             cout<<c;
+            if(j <= breakpoint) c++;
+            else c--;
         }
         // spaces
         for(int j = 0; j<n-i-1; j++){
