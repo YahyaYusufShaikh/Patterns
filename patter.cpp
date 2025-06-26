@@ -239,48 +239,66 @@ void print15(int n = 5){
 void print16(int n = 5){
     int spaces = 0;
     for(int i = 0; i<n; i++){
-        for(int j = 1; j<n-i; j++){
+        for(int j = 1; j<=n-i; j++){
             cout<<"*";
         }
         for(int j = 0; j< spaces; j++){
             cout<<" ";
         }
-        for(int j = 1; j<n-i; j++){
+        for(int j = 1; j<=n-i; j++){
             cout<<"*";
         }
         spaces += 2;
         cout<<endl;
     }
-}
-void print16_1(int n = 5){
     int space = (2*n)-2;
-    for( int i = 0; i<n; i++){
-        for(int j = 1; j<=i; j++){
+    for(int i = 0; i<n; i++){
+        for(int j = 0; j<=i; j++){
             cout<<"*";
         }
         for(int j = 0; j<space; j++){
             cout<<" ";
         }
-        for(int j = i; j>=1; j--){
+        for(int j = i; j>=0; j--){
             cout<<"*";
         }
         cout<<endl;
         space -= 2;
     }
+}
+void print16_1(int n = 5){
     //symmety
-        int space = (2*n)-2;
+        int spaces = (2*n)-2;
     for( int i = 0; i<n; i++){
         for(int j = 1; j<=i; j++){
             cout<<"*";
         }
-        for(int j = 0; j<space; j++){
+        for(int j = 0; j<spaces; j++){
             cout<<" ";
         }
         for(int j = i; j>=1; j--){
             cout<<"*";
         }
         cout<<endl;
-        space -= 2;
+        spaces -= 2;
+    }
+}
+void print17(int n = 5){
+     //symmety
+        int spaces = (2*n)-2;
+    for( int i = 1; i<=n; i++){
+        for(int j = 1; j<=i; j++){
+            cout<<"*";
+        }
+        for(int j = 0; j<spaces; j++){
+            cout<<" ";
+        }
+        for(int j = i; j>=1; j--){
+            cout<<"*";
+        }
+        cout<<endl;
+        if(i <= 2*n-1/2) spaces += 2;
+        spaces -= 2;
     }
 }
 int main()
@@ -311,6 +329,8 @@ int main()
     cout << "print16" << endl <<"\n";
     print16();
     print16_1();
+    cout << "print17" << endl <<"\n";
+    print17();
 
     return 0;
 }
