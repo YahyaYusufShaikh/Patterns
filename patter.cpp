@@ -228,6 +228,30 @@ void print14(int n = 5){
         cout<<endl;
     }
 }
+void print15(int n = 5){
+      for(int i =0; i<n; i++){
+        for(char ch = 'E' - i; ch <= 'E'; ch++ ){
+            cout<<ch<<" ";
+        }
+        cout<<endl;
+    }
+}
+void print16(int n = 5){
+    int spaces = 0;
+    for(int i = 0; i<=n; i++){
+        for(int j = 1; j<n-i; j++){
+            cout<<"*";
+        }
+        for(int j = 0; j< spaces; j++){
+            cout<<" ";
+        }
+        for(int j = 1; j<n-i; j++){
+            cout<<"*";
+        }
+        spaces += 2;
+        cout<<endl;
+    }
+}
 int main()
 {
     print5(5);
@@ -251,5 +275,10 @@ int main()
     print13();
     cout << "print14" << endl <<"\n";   
     print14();
+    cout << "print15" << endl <<"\n";
+    print15();
+    cout << "print16" << endl <<"\n";
+    print16();
+
     return 0;
 }
