@@ -213,8 +213,8 @@ void print14(int n = 5){
         for(int j = 0; j<=n-i-1; j++){
             cout<<" ";
         }
-        // characters
-        for(int j = 0; j<2*i-1; j++){
+        // character
+        for(char j = 0; j<2*i-1; j++){
             cout<<"*";
         }
         // spaces
