@@ -307,6 +307,18 @@ void print17(int n = 5){
     }
 
 }
+void print18(int n = 4){
+    for(int i = 1; i<=n; i++){
+        for(int j =1; j<=i; j++){
+            if(i == 1 || i == n || j == 1 || j == n) {
+                cout<<"*";
+            }
+            else{
+                cout<<" ";
+            }
+        }
+    }
+}
 int main()
 {
     print5(5);
@@ -337,6 +349,8 @@ int main()
     print16_1();
     cout << "print17" << endl <<"\n";
     print17();
+    cout << "print18" << endl <<"\n";
+    print18();
 
     return 0;
 }
