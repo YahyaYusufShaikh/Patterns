@@ -7,6 +7,7 @@ Write your code in this editor and press "Run" button to compile and execute it.
 *******************************************************************************/
 
 #include <iostream>
+#include <algorithm>
 using namespace std;
 
 void print5_1(int n)
@@ -320,6 +321,19 @@ void print18(int n = 4){
         cout<<endl;
     }
 }
+void print19(int n = 4){
+    for(int i = 0; i<2*n-1; i++){
+        for(int j = 0; j<2*n-1; j++){
+            int top = i;
+            int left = j;
+            int right = (2*n-2)-j;
+            int bottom = (2*n-2)-i;
+            cout<<(n-min(min(top, bottom), min(left, right)));
+
+        }
+        cout<<endl;
+    }
+}
 int main()
 {
     print5(5);
@@ -352,6 +366,8 @@ int main()
     print17();
     cout << "print18" << endl <<"\n";
     print18();
+    cout << "print19" << endl <<"\n";
+    print19();
 
     return 0;
 }
